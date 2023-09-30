@@ -26,11 +26,23 @@
                 <constraints nullable="false"/>
             </column>
             <column name="type"
-                    type="ENUM('house')">
+                    type="VARCHAR(10)">
                 <constraints nullable="false"/>
-
-
             </column>
+
+            <column name="area"
+                    type="NUMERIC(5,0)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="price"
+                    type="NUMERIC(12,0)">
+                <constraints nullable="false"/>
+            </column>
+
+
+
+
 
 
         </createTable>
