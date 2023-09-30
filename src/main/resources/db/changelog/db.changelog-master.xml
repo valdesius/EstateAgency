@@ -7,9 +7,8 @@
         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
     <include file="db/changelog/1/0/2023-09-30--0001-client.xml"/>
     <include file="db/changelog/1/0/2023-09-30--0002-realtor.xml"/>
-    <include file="db/changelog/1/0/2023-09-30--0003-deal.xml"/>
     <include file="db/changelog/1/0/2023-09-30--0004-realty.xml"/>
-
+    <include file="db/changelog/1/0/2023-09-30--0003-deal.xml"/>
 
 
 </databaseChangeLog>

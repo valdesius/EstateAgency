@@ -17,9 +17,22 @@
             <column name="id"
                     type="NUMERIC(19,0)"
                     autoIncrement="true">
-                <constraints nullable="false"/>
+                <constraints nullable="false"
+                             primaryKey="true"/>
 
             </column>
+            <column name="address"
+                    type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="type"
+                    type="ENUM('house')">
+                <constraints nullable="false"/>
+
+
+            </column>
+
+
         </createTable>
 
     </changeSet>

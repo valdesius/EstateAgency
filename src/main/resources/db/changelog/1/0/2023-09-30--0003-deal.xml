@@ -18,8 +18,31 @@
             <column name="id"
                     type="NUMERIC(19,0)"
                     autoIncrement="true">
-                <constraints nullable="false"/>
+                <constraints nullable="false"
+                             primaryKey="true"/>
             </column>
+            <column name="client_id"
+                    type="NUMERIC(19,0)">
+                <constraints nullable="false"
+                             foreignKeyName="fk_deal_client"
+                             references="client(id)"/>
+            </column>
+
+            <column name="realtor_id"
+                    type="NUMERIC(19,0)">
+                <constraints nullable="false"
+                             foreignKeyName="fk_deal_realtor"
+                             references="realtor(id)"/>
+            </column>
+
+            <column name="realty_id"
+                    type="NUMERIC(19,0)">
+                <constraints nullable="false"
+                             foreignKeyName="fk_deal_realty"
+                             references="realty(id)"/>
+            </column>
+
+
         </createTable>
     </changeSet>
 </databaseChangeLog>

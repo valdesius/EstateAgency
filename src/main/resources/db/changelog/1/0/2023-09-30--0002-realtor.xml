@@ -16,6 +16,18 @@
             <column name="id"
                     type="NUMERIC(19,0)"
                     autoIncrement="true">
+                <constraints nullable="false"
+                             primaryKey="true"/>
+            </column>
+
+            <column name="name"
+                    type="VARCHAR(100)">
+
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="phone"
+                    type="NUMERIC(12,0)">
                 <constraints nullable="false"/>
             </column>
         </createTable>
