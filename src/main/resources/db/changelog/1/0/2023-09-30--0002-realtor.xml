@@ -27,7 +27,7 @@
             </column>
 
             <column name="phone"
-                    type="NUMERIC(12,0)">
+                    type="VARCHAR(12)">
                 <constraints nullable="false"/>
             </column>
         </createTable>
