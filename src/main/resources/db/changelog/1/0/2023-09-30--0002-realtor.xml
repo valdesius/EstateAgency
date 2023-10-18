@@ -12,6 +12,7 @@
             </not>
         </preConditions>
 
+
         <createTable tableName="realtor">
             <column name="id"
                     type="NUMERIC(19,0)"
