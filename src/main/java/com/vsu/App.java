@@ -13,9 +13,11 @@ import java.util.List;
 public class App {
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(App.class, args);
-
-        context.getBean(AgencyDemoService.class).clientDemo();
-        context.close();
+        try {
+            Console.main(args);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 }
