@@ -23,4 +23,7 @@ public class Realtor {
     @Column(name = "phone")
     private String phone;
 
+    @Column(name = "email")
+    private String email;
+
 }

@@ -1,6 +1,7 @@
 package com.vsu.domain;
 
 
+import com.vsu.domain.enums.RealtyEnum;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,6 +14,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @Entity
 @Table(name = "realty")
+
 public class Realty {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,8 +23,8 @@ public class Realty {
     @Column(name = "address")
     private String address;
 
-    @Column(name =  "type")
-    private String type;
+    @Column(name = "realtyType")
+    private RealtyEnum type;
 
     @Column(name = "area")
     private int area;
