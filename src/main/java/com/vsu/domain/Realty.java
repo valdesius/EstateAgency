@@ -17,6 +17,7 @@ public class Realty {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     @Column(name = "address")
     private String address;
 

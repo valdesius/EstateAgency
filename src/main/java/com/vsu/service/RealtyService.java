@@ -18,7 +18,7 @@ public interface RealtyService {
 
     Realty getById(int id);
 
-    Realty getByArea(int area);
+    Realty getByAddress(String address);
 
     Realty update(int id, int area);
 

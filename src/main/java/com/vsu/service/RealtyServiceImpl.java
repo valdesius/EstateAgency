@@ -28,8 +28,8 @@ public class RealtyServiceImpl implements RealtyService {
     }
 
     @Override
-    public Realty getByArea(int area) {
-        return realtyRepository.findByArea(area);
+    public Realty getByAddress(String address) {
+        return realtyRepository.findByAddress(address);
     }
 
 

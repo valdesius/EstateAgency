@@ -15,12 +15,12 @@ public class Client {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
 
-    @NotBlank(message="Name must not be empty")
+    private int id;
 
     @Column(name = "name")
     private String name;
+
     @Column(name = "phone")
     private String phone;
 }

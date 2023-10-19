@@ -12,7 +12,7 @@ public interface ClientService {
     Client getById(int id);
     Client getByName(String name);
 
-    Client update(int id, String nameClient);
+    Client update(int id, String nameClient, String phone);
 
     void deleteById(int id);
 

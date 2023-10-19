@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface RealtyRepository extends JpaRepository<Realty, Integer> {
 
-    Realty findByArea(int area);
+    Realty findByAddress(String address);
 
 }

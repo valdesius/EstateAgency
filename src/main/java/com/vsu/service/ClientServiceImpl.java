@@ -35,10 +35,11 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public Client update(int id, String nameClient) {
+    public Client update(int id, String nameClient, String phone) {
         Client client = Client.builder()
                 .id(id)
                 .name(nameClient)
+                .phone(phone)
                 .build();
         return clientRepository.save(client);
 
