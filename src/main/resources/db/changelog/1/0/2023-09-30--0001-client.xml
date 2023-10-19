@@ -21,7 +21,7 @@
                              primaryKey="true"/>
             </column>
             <column name="name"
-                    type="VARCHAR(100)">
+                    type="VARCHAR(50)">
 
                 <constraints nullable="false"/>
             </column>
@@ -29,6 +29,10 @@
             <column name="phone"
                     type="VARCHAR(12)">
                 <constraints nullable="false"/>
+            </column>
+
+            <column name="email" type="VARCHAR(40)">
+                <constraints nullable="true"/>
             </column>
         </createTable>
     </changeSet>

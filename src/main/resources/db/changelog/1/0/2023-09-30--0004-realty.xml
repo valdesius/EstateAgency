@@ -25,19 +25,19 @@
                     type="VARCHAR(50)">
                 <constraints nullable="false"/>
             </column>
-            <column name="type"
-                    type="VARCHAR(10)">
-                <constraints nullable="true"/>
+            <column name="realtyType"
+                    type="ENUM('apartment', 'house')">
+                <constraints nullable="false"/>
             </column>
 
             <column name="area"
                     type="NUMERIC(5,0)">
-                <constraints nullable="true"/>
+                <constraints nullable="false"/>
             </column>
 
             <column name="price"
                     type="NUMERIC(12,0)">
-                <constraints nullable="true"/>
+                <constraints nullable="false"/>
             </column>
 
 

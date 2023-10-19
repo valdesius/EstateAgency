@@ -21,6 +21,15 @@
                 <constraints nullable="false"
                              primaryKey="true"/>
             </column>
+
+            <column name="date" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="type" type="ENUM('BUY', 'SELL', 'RENT')">
+                <constraints nullable="false"/>
+            </column>
+
             <column name="client_id"
                     type="NUMERIC(19,0)">
                 <constraints nullable="false"
