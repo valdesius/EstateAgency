@@ -1,2 +1,7 @@
-client_id;realtor_id;realty_id
-1;1;1
+date;type;client_id;realtor_id;realty_id
+2023-10-01;BUY;1;1;1
+2023-10-02;SELL;2;2;2
+2023-10-05;RENT;3;3;3
+2023-10-08;BUY;4;4;4
+2023-10-11;SELL;5;5;5
+

@@ -1,3 +1,6 @@
-address;type;area;price
-Переулок а;Аренда;40;10000
-Переулок б;Аренда;60;20000
+address;realtyType;area;price
+Переулок а;apartment;40;1000000
+Переулок б;house;60;2000000
+Переулок в;house;101;5000000
+Переулок г;apartment;42;3500000
+Переулок д;house;54;7000000

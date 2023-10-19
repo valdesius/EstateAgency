@@ -1,4 +1,6 @@
-name;phone
-Даня;8989898989
-Полянских Александр;8989898989
-Малышев Влад;89056598804
+name;phone;email
+Даня Третьяков;8989898989;danya@example.com
+Полянских Александр;8989898989;alexander@example.com
+Малышев Владислав;89056598804;vlad@example.com
+Иванов Иван;89123456789;ivan@example.com
+Сидорова Екатерина;89098765432;katerina@example.com

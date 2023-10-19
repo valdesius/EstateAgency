@@ -1,3 +1,6 @@
-name;phone
-Терешкин Егор;8989898989
-Малышев Влад;89056598804
+name;phone;email
+Анастасия Смирнова;89123456789;anastasia@example.com
+Максим Зайцев;8989898989;maxim@example.com
+Екатерина Николаева;89056598804;ekaterina@example.com
+Дмитрий Иванов;89098765432;dmitry@example.com
+Ольга Петрова;89654321987;olga@example.com
