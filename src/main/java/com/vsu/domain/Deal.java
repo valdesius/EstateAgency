@@ -26,6 +26,7 @@ public class Deal {
     private LocalDate date;
 
     @Column(name = "type")
+    @Enumerated(EnumType.STRING)
     private DealEnum type;
 
 

@@ -3,10 +3,13 @@ package com.vsu.service;
 import com.vsu.domain.Client;
 import com.vsu.domain.Deal;
 import com.vsu.domain.Realtor;
+import com.vsu.domain.enums.DealEnum;
+import com.vsu.repository.DealRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -16,6 +19,7 @@ public class AgencyDemoService {
     private final ClientService clientService;
     private final RealtorService realtorService;
     private final DealService dealService;
+    private final DealRepository dealRepository;
 
 
     public void clientDemo() {
@@ -61,26 +65,13 @@ public class AgencyDemoService {
 
     @Transactional
     public void dealDemo() {
-        List<Deal> dealList = dealService.getAll();
+        LocalDate date = LocalDate.parse("2023-01-01");
+        dealRepository.updateDealById(4, date, DealEnum.SELL);
+        List<Deal> dealList = dealRepository.findAll();
 
         for (Deal deal : dealList) {
-            System.out.println(deal.getId() + ":"
-                    + deal.getClient().getName() + ","
-                    + deal.getRealtor().getName() + ","
-                    + deal.getRealty().getAddress());
-
-        }
-
-
-        dealService.insert("Саша", "89089089","Катя", "7899787987","Улица Мира" );
-
-        dealList = dealService.getAll();
-
-        for (Deal deal : dealList) {
-            System.out.println(deal.getId() + ":"
-                    + deal.getClient().getName() + ","
-                    + deal.getRealtor().getName() + ","
-                    + deal.getRealty().getAddress());
+            System.out.println(deal.getClient().getName() + ":");
+            System.out.println(deal.getId() + " - " + deal.getDate() + " - " + deal.getType());
 
         }
 

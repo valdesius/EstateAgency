@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import java.sql.SQLException;
-import java.util.List;
 
 @SpringBootApplication
 public class App {
