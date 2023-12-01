@@ -1,6 +1,7 @@
 package com.vsu.repository;
 
 import com.vsu.domain.Client;
+import com.vsu.service.DealService;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.junit.jupiter.api.DisplayName;
@@ -19,6 +20,7 @@ class ClientRepositoryTest {
     @Autowired
 
     private ClientRepository clientRepository;
+
     @PersistenceContext
     private EntityManager entityManager;
 
@@ -41,10 +43,7 @@ class ClientRepositoryTest {
     void shouldDeleteClient() {
         int size = clientRepository.findAll().size();
         clientRepository.deleteById(2);
-
-        int sizeAfter = clientRepository.findAll().size();
-        assertThat(size-sizeAfter).isEqualTo(1);
-
+        int after = clientRepository.findAll().size();
+        assertThat(size-after).isEqualTo(1);
     }
-
 }

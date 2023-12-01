@@ -14,33 +14,31 @@
 
 
         <createTable tableName="realty">
-            <column name="id"
-                    type="NUMERIC(19,0)"
-                    autoIncrement="true">
-                <constraints nullable="false"
-                             primaryKey="true"/>
+        <column name="id"
+                type="NUMERIC(19,0)"
+                autoIncrement="true">
+            <constraints nullable="false"
+                         primaryKey="true"/>
 
-            </column>
-            <column name="address"
-                    type="VARCHAR(50)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="realtyType"
-                    type="ENUM('apartment', 'house')">
-                <constraints nullable="false"/>
-            </column>
+        </column>
+        <column name="address"
+                type="VARCHAR(50)">
+            <constraints nullable="false"/>
+        </column>
+        <column name="type"
+                type="VARCHAR(10)">
+            <constraints nullable="true"/>
+        </column>
 
-            <column name="area"
-                    type="NUMERIC(5,0)">
-                <constraints nullable="false"/>
-            </column>
+        <column name="area"
+                type="NUMERIC(5,0)">
+            <constraints nullable="false"/>
+        </column>
 
-            <column name="price"
-                    type="NUMERIC(12,0)">
-                <constraints nullable="false"/>
-            </column>
-
-
+        <column name="price"
+                type="NUMERIC(12,0)">
+            <constraints nullable="false"/>
+        </column>
         </createTable>
 
     </changeSet>

@@ -14,16 +14,15 @@ import lombok.NoArgsConstructor;
 @Builder
 @Entity
 @Table(name = "realty")
-
 public class Realty {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
     @Column(name = "address")
     private String address;
 
-    @Column(name = "realtyType")
+    @Column(name = "type")
+    @Enumerated(EnumType.STRING)
     private RealtyEnum type;
 
     @Column(name = "area")
@@ -34,3 +33,4 @@ public class Realty {
 
 
 }
+
