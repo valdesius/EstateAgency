@@ -65,8 +65,8 @@ public class AgencyDemoService {
 
     @Transactional
     public void dealDemo() {
-        LocalDate date = LocalDate.parse("2023-01-01");
-        dealRepository.updateDealById(4, date, DealEnum.SELL);
+
+        dealRepository.updateDealById(4, LocalDate.now(), DealEnum.SELL);
         List<Deal> dealList = dealRepository.findAll();
 
         for (Deal deal : dealList) {

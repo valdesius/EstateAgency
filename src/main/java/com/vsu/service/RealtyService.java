@@ -1,15 +1,9 @@
 package com.vsu.service;
 
-import com.vsu.domain.Client;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
-
-
+import com.vsu.domain.enums.RealtyEnum;
 import com.vsu.domain.Realty;
 
 import java.util.List;
-
-
 
 public interface RealtyService {
     Realty insert(Realty realty);
@@ -18,9 +12,7 @@ public interface RealtyService {
 
     Realty getById(int id);
 
-    Realty getByAddress(String address);
-
-    Realty update(int id, int area);
+    Realty update(int id, String address, int area, RealtyEnum type, int price);
 
     void deleteById(int id);
 }

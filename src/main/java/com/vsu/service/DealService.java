@@ -1,11 +1,25 @@
 package com.vsu.service;
 
 import com.vsu.domain.Deal;
+import com.vsu.domain.enums.DealEnum;
+import com.vsu.domain.enums.RealtyEnum;
 
+import java.time.LocalDate;
 import java.util.List;
 
 public interface DealService {
-    Deal insert(String clientName, String clientPhone, String realtorName, String realtyPhone, String realtyAddress);
+    Deal insert(
+            LocalDate date,
+            DealEnum type,
+            String clientName,
+            String clientPhone,
+            String realtorName,
+            String realtorPhone,
+            String realtyAddress,
+            RealtyEnum realtyType,
+            int area,
+            int price
+    );
 
     List<Deal> getAll();
 
@@ -13,7 +27,19 @@ public interface DealService {
 
     Deal getByDate(String date);
 
-    Deal update(int id, String clientName, String clientPhone, String realtorName, String realtorPhone, String realtyAddress);
+    Deal update(
+            int id,
+            LocalDate date,
+            DealEnum type,
+            String clientName,
+            String clientPhone,
+            String realtorName,
+            String realtorPhone,
+            String realtyAddress,
+            RealtyEnum realtyType,
+            int area,
+            int price
+    );
 
     void deleteById(int id);
 

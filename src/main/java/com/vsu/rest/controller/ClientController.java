@@ -11,12 +11,14 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequiredArgsConstructor
-public class ClientController {
 
+public class ClientController {
     private final ClientService clientService;
 
     @GetMapping("/client")
     public List<ClientDto> getAllClient() {
+
+
         return clientService
                 .getAll()
                 .stream()
@@ -28,15 +30,12 @@ public class ClientController {
     public ClientDto insertClient(@RequestBody ClientDto clientDto) {
         Client client = clientService.insert(ClientDto.toDomainObject(clientDto));
         return ClientDto.toDto(client);
-
     }
 
     @PutMapping("/client/{id}")
-    public ClientDto updateClient(@PathVariable int id,
-                                  @RequestParam String name, @RequestParam String phone) {
+    public ClientDto updateClient(@PathVariable int id, @RequestParam String name, @RequestParam String phone) {
         Client client = clientService.update(id, name, phone);
         return ClientDto.toDto(client);
-
     }
 
     @DeleteMapping("/client/{id}")
