@@ -20,9 +20,6 @@ public class DealController {
     private final DealService dealService;
 
 
-
-
-
     @GetMapping("/deal")
 
     public List<DealDto> getAllDeal() {
@@ -36,14 +33,16 @@ public class DealController {
             @RequestParam DealEnum type,
             @RequestParam String clientName,
             @RequestParam String clientPhone,
+            @RequestParam String clientEmail,
             @RequestParam String realtorName,
             @RequestParam String realtorPhone,
+            @RequestParam String realtorEmail,
             @RequestParam String realtyAddress,
             @RequestParam RealtyEnum realtyType,
             @RequestParam int area,
             @RequestParam int price
     ) {
-        Deal deal = dealService.insert(date, type, clientName, clientPhone, realtorName, realtorPhone, realtyAddress, realtyType, area, price);
+        Deal deal = dealService.insert(date, type, clientName, clientPhone, clientEmail, realtorName, realtorPhone, realtorEmail, realtyAddress, realtyType, area, price);
         return DealDto.toDto(deal);
     }
 
@@ -55,15 +54,17 @@ public class DealController {
             @RequestParam DealEnum type,
             @RequestParam String clientName,
             @RequestParam String clientPhone,
+            @RequestParam String clientEmail,
             @RequestParam String realtorName,
             @RequestParam String realtorPhone,
+            @RequestParam String realtorEmail,
             @RequestParam String realtyAddress,
             @RequestParam RealtyEnum realtyType,
             @RequestParam int area,
             @RequestParam int price
     ) {
 
-        Deal deal = dealService.update(id, date, type, clientName, clientPhone, realtorName, realtorPhone, realtyAddress, realtyType, area, price);
+        Deal deal = dealService.update(id, date, type, clientName, clientPhone, clientEmail, realtorName, realtorPhone, realtorEmail, realtyAddress, realtyType, area, price);
         return DealDto.toDto(deal);
     }
 

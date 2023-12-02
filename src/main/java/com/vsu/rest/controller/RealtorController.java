@@ -34,8 +34,12 @@ public class RealtorController {
     }
 
     @PutMapping("/realtor/{id}")
-    public RealtorDto updateRealtor(@PathVariable int id, @RequestParam String name, @RequestParam String phone) {
-        Realtor realtor = realtorService.update(id, name, phone);
+    public RealtorDto updateRealtor(@PathVariable int id,
+                                    @RequestParam String name,
+                                    @RequestParam String phone,
+                                    @RequestParam String email
+    ) {
+        Realtor realtor = realtorService.update(id, name, phone, email);
         return RealtorDto.toDto(realtor);
     }
 

@@ -15,24 +15,6 @@ import java.util.Random;
 public class RealtorServiceImpl implements RealtorService {
     private final RealtorRepository realtorRepository;
 
-    @PostConstruct
-    public void init() {
-        generateRandomRealtors(1000);
-    }
-
-    public void generateRandomRealtors(int count) {
-        Random random = new Random();
-        for (int i = 0; i < count; i++) {
-            String randomName = "Realtor-" + (i + 1);
-            String randomPhone = "555-" + String.format("%04d", random.nextInt(10000));
-            Realtor realtor = Realtor.builder()
-                    .name(randomName)
-                    .phone(randomPhone)
-                    .build();
-            realtorRepository.save(realtor);
-        }
-    }
-
     @Override
     public Realtor insert(Realtor realtor) {
         return realtorRepository.save(realtor);
@@ -54,11 +36,12 @@ public class RealtorServiceImpl implements RealtorService {
     }
 
     @Override
-    public Realtor update(int id, String name, String phone) {
+    public Realtor update(int id, String name, String phone, String email) {
         Realtor realtor = Realtor.builder()
                 .id(id)
                 .name(name)
                 .phone(phone)
+                .email(email)
                 .build();
 
         return realtorRepository.save(realtor);

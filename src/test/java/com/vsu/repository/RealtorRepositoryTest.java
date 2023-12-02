@@ -25,6 +25,7 @@ class RealtorRepositoryTest {
                 .id(2)
                 .name("wdwd")
                 .phone("97")
+                .email("cdscwcc")
                 .build();
 
 

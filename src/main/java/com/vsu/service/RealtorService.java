@@ -13,7 +13,7 @@ public interface RealtorService {
     Realtor getById(int id);
     Realtor getByName(String name);
 
-    Realtor update(int id, String name, String phone);
+    Realtor update(int id, String name, String phone, String email);
 
     void deleteById(int id);
 

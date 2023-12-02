@@ -33,8 +33,12 @@ public class ClientController {
     }
 
     @PutMapping("/client/{id}")
-    public ClientDto updateClient(@PathVariable int id, @RequestParam String name, @RequestParam String phone) {
-        Client client = clientService.update(id, name, phone);
+    public ClientDto updateClient(@PathVariable int id,
+                                  @RequestParam String name,
+                                  @RequestParam String phone,
+                                  @RequestParam String email
+    ) {
+        Client client = clientService.update(id, name, phone, email);
         return ClientDto.toDto(client);
     }
 

@@ -30,7 +30,6 @@ public class DealServiceImpl implements DealService {
     private final DealRepository dealRepository;
 
 
-
 //    public void generateRandomDeals(int count) {
 //        Random random = new Random();
 //        List<Realtor> realtors = realtorRepository.findAll();
@@ -57,16 +56,16 @@ public class DealServiceImpl implements DealService {
 //    }
 
 
-
-
     @Override
     public Deal insert(
             LocalDate date,
             DealEnum type,
             String clientName,
             String clientPhone,
+            String clientEmail,
             String realtorName,
             String realtorPhone,
+            String realtorEmail,
             String realtyAddress,
             RealtyEnum realtyType,
             int area,
@@ -74,13 +73,13 @@ public class DealServiceImpl implements DealService {
     ) {
         Client client = clientRepository.findByName(clientName);
         if (client == null) {
-            client = Client.builder().name(clientName).phone(clientPhone).build();
+            client = Client.builder().name(clientName).phone(clientPhone).email(clientEmail).build();
             client = clientRepository.save(client);
         }
 
         Realtor realtor = realtorRepository.findByName(realtorName);
         if (realtor == null) {
-            realtor = Realtor.builder().name(realtorName).phone(realtorPhone).build();
+            realtor = Realtor.builder().name(realtorName).phone(realtorPhone).email(realtorEmail).build();
             realtor = realtorRepository.save(realtor);
         }
 
@@ -117,8 +116,10 @@ public class DealServiceImpl implements DealService {
             DealEnum type,
             String clientName,
             String clientPhone,
+            String clientEmail,
             String realtorName,
             String realtorPhone,
+            String realtorEmail,
             String realtyAddress,
             RealtyEnum realtyType,
             int area,
@@ -126,13 +127,13 @@ public class DealServiceImpl implements DealService {
     ) {
         Client client = clientRepository.findByName(clientName);
         if (client == null) {
-            client = Client.builder().name(clientName).phone(clientPhone).build();
+            client = Client.builder().name(clientName).phone(clientPhone).email(clientEmail).build();
             client = clientRepository.save(client);
         }
 
         Realtor realtor = realtorRepository.findByName(realtorName);
         if (realtor == null) {
-            realtor = Realtor.builder().name(realtorName).phone(realtorPhone).build();
+            realtor = Realtor.builder().name(realtorName).phone(realtorPhone).email(realtorEmail).build();
             realtor = realtorRepository.save(realtor);
         }
 
